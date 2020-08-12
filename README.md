@@ -1,7 +1,9 @@
 # Portpolio
-신환희의 포트폴리오 입니다.
+신환희의 포트폴리오입니다.
+Hwan hee Shin's Portfolio Web[Start Bootstrap - Creative](https://startbootstrap.com/template-overviews/creative/)
 
-특허
-주제 : 부트 스트랩 시작-크리에이티브
+**[View Page](https://jsp0269.github.io/portfolio)**
 
-저작권 2013-2019 Blackrock Digital LLC. MIT 라이선스에 따라 공개 된 코드 .
+## License
+Theme : [Start Bootstrap - Creative](http://startbootstrap.com/template-overviews/creative/)
+* Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-creative/blob/gh-pages/LICENSE) license.
