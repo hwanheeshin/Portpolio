@@ -2,7 +2,7 @@
 신환희의 포트폴리오입니다.
 Hwan hee Shin's Portfolio Web[Start Bootstrap - Creative](https://startbootstrap.com/template-overviews/creative/)
 
-**[View Page](https://hwanheeshin.github.io/portfolio)**
+**[View Page](https://hwanheeshin.github.io)**
 
 ## License
 Theme : [Start Bootstrap - Creative](http://startbootstrap.com/template-overviews/creative/)
