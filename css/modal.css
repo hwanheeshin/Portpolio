@@ -162,6 +162,10 @@
         font-size: 0.85rem;
     }
 
+    .ex2 li{
+        font-size: 1.1rem;
+    }
+
     .imgmodal-display-topright {
         position: absolute;
         right: 0;

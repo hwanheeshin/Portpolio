@@ -109,11 +109,11 @@ address {
 
 .mn{    
   margin-left: -25px;
-  margin-top: 9px;
+  margin-top: 15px;
 }
 
 .dm{
-  margin-bottom: 14px;
+  margin-top: 14px;
 }
 
 ol,
@@ -607,6 +607,15 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 15px;
 }
 
 .no-gutters {
