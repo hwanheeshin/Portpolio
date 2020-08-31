@@ -1,5 +1,7 @@
 $(document).ready(function () {
 	  $("#inc-ariby").load("project/Ariby.html");
+	  $("#inc-aws").load("project/AWS.html");
+	  $("#inc-ncp").load("project/NCP.html");
 	  $("#inc-summoner").load("project/SummonerVR.html");
 	  $("#inc-gotohome").load("project/gotohome.html");
 	  $("#inc-bicycle").load("project/Bike.html");
