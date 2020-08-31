@@ -1,129 +1,347 @@
 <div id="pro-ncp2" class="modal">
-	<div class="text-center">
-		<h4>PROJECTS</h4>
-		<h2>
-			<b>NAVER Cloud Plattform을 이용한 스토리지 실습</b>
-		</h2>
-	</div>
+<div class="text-center">
+	<h4>PROJECTS</h4>
+	<h2>
+		<b>NAVER Cloud Plattform을 이용한 스토리지 구축</b>
+	</h2>
+</div>
 
-	<hr class="cutter">
+<hr class="cutter">
 
-	<div class="row">
-		<p class="col-md-4 text-center">
-			<img class="overview" src="image/project/thumbnails/ncp2.jpg">
-		</p>
-		<div class="col-md-8">
-			<ul class="ex">
-				<li><b>실습 의도 : </b>NCP의 Block Storage, NAS, Object Storage의 구축</li>
-				<li><b>기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간 :
-				</b>2020.07.06 ~ 2020.07.31</li>
-				<li><b>총 인원수 : </b> 1명</li>
-				<li><b>실습 도구 : </b> Putty, Xmanager Enterprise 5, CloudBerry Explorer for Amazon S3</li>
-				<li><b>사용 기능 : </b> Storage(NAS, Object Storage, Snap Shot), Server(Port forwarding)</li>
-			</ul>
-		</div>
-	</div>
-	<hr class="cutter">
-
-	<div>
-		<h2 class="text-center">
-			<b>EXPLANATION & SNAPSHOT</b>
-		</h2>
+<div class="row">
+	<p class="col-md-4 text-center">
+		<img class="overview" src="image/project/thumbnails/ncp2.jpg">
+	</p>
+	<div class="col-md-8">
 		<ul class="ex">
-			<li class="dm">Storage 실습
-				<ul class="mn">Block Storage</ul>
-				<ul>
-					<li>스토리지 생성 및 서버 연결</li>
-					<li>파티셔닝 및 포맷</li>
-					<li>mount & fstab 등록</li>
-					<li>umount & 스토리지 해제</li>
-					<li>스토리지 재할당</li>
-					<li>스냅샷 생성</li>
-					<li>스토리지 확장</li>
-				</ul>
-
-				<ul class="mn">NAS</ul>
-				<ul>
-					<li>NAS 생성</li>
-					<li>패키지 설치</li>
-					<li>Mount & fstab 등록</li>
-				</ul>
-
-				<ul class="mn">Object Storage</ul>
-				<ul>
-					<li>Object Storage 생성</li>
-					<li>CloudBerry 연동</li>
-					<li>Fuse 서버 연동</li>
-				</ul>
-			</li>
+			<li><b>실습 의도 : </b>Block Storage, NAS, Object Storage의 구축</li>
+			<li><b>기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간 :
+			</b>2020.07.06 ~ 2020.07.31</li>
+			<li><b>총 인원수 : </b> 1명</li>
+			<li><b>실습 도구 : </b> Putty, Xmanager Enterprise 5, CloudBerry Explorer for Amazon S3</li>
+			<li><b>사용 기능 : </b> Storage(NAS, Object Storage, Snap Shot), Server(Port forwarding)</li>
 		</ul>
 	</div>
-
-	<hr class="cutter">
-
+</div>
+<hr class="cutter">
 	<h2 class="text-center">
-		<b>SNAPSHOT</b>
+		<b>EXPLANATION</b>
 	</h2>
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view7.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">데이터베이스 모델링</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view8.jpg"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">메뉴 구성</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view0.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">로그인</div>
-		</div>
-	</div>
+	<ul class="mn">서버는 CentOS 7.3, Standard-vCPU2 & 4 Memory, Zone-2, g1세대, test-acg 사양 기준으로 실습을 진행 하였습니다.</ul>
+	<ul class="ex">
+		<li>스토리지를 생성하고 서버에 연결 후, 파티셔닝, 마운트, fstab 등록 등의 작업을 진행 하였습니다.</li>
+		<li>연결된 서버에서 스토리지를 umount 후, 다른 서버에 재 할당 하는 실습을 진행 하였습니다.</li>
+		<li>스토리지를 확장하고, 스냅샷을 생성하여 서버에 축적하는 작업을 진행 하였습니다.</li>
+		<li>NAS를 구축하는 작업을 진행 하였습니다.</li>
+		<li>Object Storage를 생성후, CloudBerry 연동 및 Fuse 서버를 연동하는 작업을 하였습니다.</li>
+		<br>
+	</ul>
+		<hr class="cutter">
+		<div>
+			<h2 class="text-center">
+				<b>Block Storage</b>
+			</h2>
+			<ul class="ex2">
+				<li>스토리지 생성 및 서버 연결</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view1.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 생성 콘솔</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view2.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 이미지 선택</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view3.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 상세 설정</div>
+					</div>
+				</div>
 
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view6.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">회원가입</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view1.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">도서 목록</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view2.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">도서 검색</div>
-		</div>
-	</div>
+				<li>파티셔닝 및 포맷</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view37.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							공인 ip 할당</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view21.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							ACG 생성 콘솔</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view22.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							ACG 규칙 생성</div>
+					</div>
+				</div>
 
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view3.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">대출 이력</div>
+				<li>mount & fstab 등록</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view15.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							관리자 비밀번호 콘솔</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view16.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							인증키 확인</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view17.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							관리자 비밀번호 확인</div>
+					</div>
+				</div>
+
+				<li>umount & 스토리지 해제</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view18.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							Putty Open</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view19.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							root 권한으로 로그인</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view20.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							passwd 명령으로 관리자 비밀번호 변경</div>
+					</div>
+				</div>
+
+				<li>스토리지 재할당</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view32.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 정지</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view33.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							관리자 PW 초기화 메뉴</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view34.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							비밀번호 인증</div>
+					</div>
+				</div>
+
+				<li>스냅샷 생성</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view7.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 이름 변경</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view8.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 이름 확인</div>
+					</div>
+				</div>
+
+				<li>스토리지 확장</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view9.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 그룹 관리</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view10.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 그룹 생성</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view11.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							그룹에 서버 추가 1</div>
+					</div>
+				</div>
 		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view4.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">전체 대출 이력</div>
+
+
+				
+		<hr class="cutter">
+		<div>
+			<h2 class="text-center">
+				<br><b>NAS</b>
+			</h2>
+			<ul class="ex2">
+				<li>NAS 생성</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view26.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 정지</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view27.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							서버 인증키 변경 탭</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view28.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							비밀번호 확인</div>
+					</div>
+				</div>
+
+				<li>패키지 설치</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view38.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 포워딩 설정 버튼</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view39.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 설정 후 저장</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view40.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							공인 ip 해제</div>
+					</div>
+				</div>
+
+
+				
+				<li>Mount & fstab 등록</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view38.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 포워딩 설정 버튼</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view39.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 설정 후 저장</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view40.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							공인 ip 해제</div>
+					</div>
+				</div>
+			</ul>
+			</div>
+
+
+			<hr class="cutter">
+			<div>
+				<h2 class="text-center">
+					<br><b>Object Storage</b>
+				</h2>
+				<ul class="ex2">
+			<li>Object Storage 생성</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view38.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 포워딩 설정 버튼</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view39.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 설정 후 저장</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view40.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							공인 ip 해제</div>
+					</div>
+				</div>
+
+
+				<li>CloudBerry 연동</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view38.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 포워딩 설정 버튼</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view39.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 설정 후 저장</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view40.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							공인 ip 해제</div>
+					</div>
+				</div>
+
+
+				<li>Fuse 서버 연동</li>
+				<div class="row2">
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view38.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 포워딩 설정 버튼</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view39.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							포트 설정 후 저장</div>
+					</div>
+					<div class="col-md-4" style="margin-bottom: 1em;">
+						<img src="project/ncp1_files/view40.PNG" style="width: 100%; cursor: pointer"
+							onclick="onClick(this)">
+						<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+							공인 ip 해제</div>
+					</div>
+				</div>
 		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view5.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">회원 목록</div>
-		</div>
-	</div>
 </div>
