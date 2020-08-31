@@ -1,10 +1,10 @@
 $(document).ready(function () {
 	  $("#inc-ariby").load("project/Ariby.html");
-	  $("#inc-aws").load("project/AWS.html");
-	  $("#inc-ncp").load("project/NCP.html");
 	  $("#inc-summoner").load("project/SummonerVR.html");
+	  $("#inc-aws").load("project/AWS.html");
 	  $("#inc-gotohome").load("project/gotohome.html");
 	  $("#inc-bicycle").load("project/Bike.html");
+	  $("#inc-ncp").load("project/NCP.html");
 	  $("#inc-disaster").load("project/Disaster.html");
 	  $("#inc-meetingplace").load("project/meetingplace.html");
 	  $("#inc-snackpop").load("project/SnackPop.html");
