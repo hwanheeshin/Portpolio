@@ -4,7 +4,9 @@ $(document).ready(function () {
 	  $("#inc-aws").load("project/AWS.html");
 	  $("#inc-gotohome").load("project/gotohome.html");
 	  $("#inc-bicycle").load("project/Bike.html");
-	  $("#inc-ncp").load("project/NCP.html");
+	  $("#inc-ncp1").load("project/ncp-compute.html");
+	  $("#inc-ncp2").load("project/ncp-storage.html");
+	  $("#inc-ncp3").load("project/ncp-network.html");
 	  $("#inc-disaster").load("project/Disaster.html");
 	  $("#inc-meetingplace").load("project/meetingplace.html");
 	  $("#inc-snackpop").load("project/SnackPop.html");

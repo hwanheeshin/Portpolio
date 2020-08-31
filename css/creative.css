@@ -106,6 +106,16 @@ address {
   line-height: inherit;
 }
 
+
+.mn{    
+  margin-left: -25px;
+  margin-top: 9px;
+}
+
+.dm{
+  margin-bottom: 14px;
+}
+
 ol,
 ul,
 dl {
@@ -963,8 +973,8 @@ pre code {
     max-width: 25%;
   }
   .col-md-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
+    flex: 0 0 33%;
+    max-width: 33%;
   }
   .col-md-5 {
     flex: 0 0 41.66667%;

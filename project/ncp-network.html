@@ -1,8 +1,8 @@
-<div id="pro-ncp" class="modal">
+<div id="pro-ncp3" class="modal">
 	<div class="text-center">
 		<h4>PROJECTS</h4>
 		<h2>
-			<b>NAVER Cloud Plattform을 이용한 서버 구축 실습</b>
+			<b>NAVER Cloud Plattform을 이용한 네트워크 실습</b>
 		</h2>
 	</div>
 
@@ -10,17 +10,16 @@
 
 	<div class="row">
 		<p class="col-md-4 text-center">
-			<img class="overview" src="project/NCP_files/Library.JPG">
+			<img class="overview" src="image/project/thumbnails/ncp3.jpg">
 		</p>
 		<div class="col-md-8">
 			<ul class="ex">
-				<li><b>실습 의도 : </b>네이버 클라우드 플랫폼의 사용 경험 축적</li>
+				<li><b>실습 의도 : </b>NCP의 ACG와 로드밸런서의 사용</li>
 				<li><b>기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간 :
 				</b>2020.07.06 ~ 2020.07.31</li>
 				<li><b>총 인원수 : </b> 1명</li>
-				<li><b>실습 도구 : </b> Putty, Putty Gen, Xmanager Enterprise 5, CloudBerry Explorer for Amazon S3</li>
-				<li><b>사용 기능 : </b> Load Balancer, Storage(NAS, Object Storage, Snap Shot) Server(Public ip, Port forwarding, 
-					ACG, Private Subnet)</li>
+				<li><b>실습 도구 : </b> Putty, Putty Gen, Xmanager Enterprise 5</li>
+				<li><b>사용 기능 : </b> Load Balancer, Server(Public ip, Port forwarding, ACG, Private Subnet)</li>
 			</ul>
 		</div>
 	</div>
@@ -28,33 +27,48 @@
 
 	<div>
 		<h2 class="text-center">
-			<b>EXPLANATION</b>
+			<b>EXPLANATION & SNAPSHOT</b>
 		</h2>
 		<ul class="ex">
-			<li>Compute 실습
+			<li class="dm">NetWork 실습
+				<ul class="mn">ACG</ul>
 				<ul>
-					<li>서버 생성 및 관리</li>
-					<li>관리자 비밀번호 확인 및 변경</li>
-					<li>서버 인증키 변경</li>
-					<li>Public ip</li>
-					<li>ACG</li>
-					<li>Putty 접속</li>
-					<li>포트 포워딩</li>
+					<li>Ping Test</li>
+					<li>ACG 등록</li>
+				</ul>
+
+				<ul class="mn">Load Balancer</ul>
+				<ul>
+					<li>Load Balancer 생성</li>
+					<li>Apache 설치</li>
+					<li>Public ip 부여</li>
+					<li>ACG 설정-1</li>
+					<li>메인페이지 변경</li>
+					<li>도메인 접속</li>
+					<li>ACG 설정-2</li>
+				</ul>
+
+				<ul class="mn">Private Subnet</ul>
+				<ul>
+					<li>NetWork Interface</li>
 				</ul>
 			</li>
-			<li>Storage 실습
-				<ul>Object Storage 생성
-					<li>스토리지 생성 및 서버 연결</li>
-					<li>파티셔닝 및 포맷</li>
-					<li>mount, fstab 등록</li>
-					<li>umount, 스토리지 해제</li>
-					<li>스토리지 재할당</li>
-					<li>스냅샷 생성</li>
-					<li>스토리지 확장</li>
-					<li>NAS 구축</li>
-					<li>Object Storage 생성 및 CloudBerry 연동</li>
-					<li></li>
 
+			<li class="dm">Security 실습
+				<ul class="mn">OS 보안</ul>
+				<ul>
+					<li>root 접근 제한</li>
+					<li>Key 접속 방식 변경</li>
+				</ul>
+
+				<ul class="mn">접속 보안</ul>
+				<ul>
+					<li>SSl vpn</li>
+				</ul>
+
+				<ul class="mn">콘솔 보안</ul>
+				<ul>
+					<li>2차인증 로그인</li>
 				</ul>
 			</li>
 		</ul>
