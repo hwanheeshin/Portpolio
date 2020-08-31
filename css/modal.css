@@ -163,7 +163,11 @@
     }
 
     .ex2 li{
-        font-size: 1.1rem;
+        font-size: 1rem;
+        background-color: #5cd1e5;
+        color: white;
+        margin-left: -2.5rem;
+        padding-inline-start: 1.3rem;
     }
 
     .imgmodal-display-topright {
