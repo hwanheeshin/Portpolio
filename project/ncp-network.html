@@ -2,143 +2,474 @@
 	<div class="text-center">
 		<h4>PROJECTS</h4>
 		<h2>
-			<b>NAVER Cloud Plattform을 이용한 네트워크 구축</b>
+			<b>NAVER Cloud Plattform을 이용한 네트워크 구축과 보안 설정</b>
 		</h2>
 	</div>
 
-	<hr class="cutter">
+		<hr class="cutter">
 
-	<div class="row">
-		<p class="col-md-4 text-center">
-			<img class="overview" src="image/project/thumbnails/ncp3.jpg">
-		</p>
-		<div class="col-md-8">
+		<div class="row">
+			<p class="col-md-4 text-center">
+				<img class="overview" src="image/project/thumbnails/ncp3.jpg">
+			</p>
+			<div class="col-md-8">
+				<ul class="ex">
+					<li><b>실습 의도 : </b>ACG와 로드밸런서의 사용 및 OS 보안</li>
+					<li><b>기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간 :
+					</b>2020.07.06 ~ 2020.07.31</li>
+					<li><b>총 인원수 : </b> 1명</li>
+					<li><b>실습 도구 : </b> Putty, Putty Gen, Xmanager Enterprise 5</li>
+					<li><b>사용 기능 : </b> Load Balancer, Server(Public ip, Port forwarding, ACG, Private Subnet)</li>
+				</ul>
+			</div>
+		</div>
+		<hr class="cutter">
+			<h2 class="text-center">
+				<b>EXPLANATION</b>
+			</h2>
+			<ul class="mn">서버는 CentOS 7.3, Standard-vCPU2 & 4 Memory, Zone-2, g1세대, test-acg 사양 기준으로 실습을 진행 하였습니다.</ul>
 			<ul class="ex">
-				<li><b>실습 의도 : </b>ACG와 로드밸런서의 사용</li>
-				<li><b>기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간 :
-				</b>2020.07.06 ~ 2020.07.31</li>
-				<li><b>총 인원수 : </b> 1명</li>
-				<li><b>실습 도구 : </b> Putty, Putty Gen, Xmanager Enterprise 5</li>
-				<li><b>사용 기능 : </b> Load Balancer, Server(Public ip, Port forwarding, ACG, Private Subnet)</li>
+				<li>두 개의 서버를 로드 밸런서를 이용해 접속하는 테스트를 진행 하였습니다.</li>
+				<li>Network Interface와 Private Subnet를 사용하여 허용된 서버만 연결이 가능하게 하였습니다.</li>
+				<li>OS 보안 작업인 root 접근 제한과 key 인증 접근을 각각 테스트 하였습니다.</li>
+				<li>접속 보안 작업인 SSL VPN 접속 테스를 진행 하였습니다.</li>
+				<li>콘솔 보안 작업인 2차인증 설정을 하였습니다.</li>
+				<li></li>
+				<br>
 			</ul>
-		</div>
-	</div>
-	<hr class="cutter">
+		<hr class="cutter">
+		<div>
+			<h2 class="text-center">
+				<b>Load Balancer</b>
+			</h2>
+		<ul class="ex2">
+			<li>Load Balancer 생성</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-1.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						로드밸런서 콘솔</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-2.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						로드밸런서 설정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-3.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						적용 서버 선택</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-5.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						로드밸런서 생성</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-6.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						로드밸런서 적용 서버 추가</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-7.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						생성한 로드밸런서 상태 및 정보 확인</div>
+				</div>
+			</div>
 
-	<div>
-		<h2 class="text-center">
-			<b>EXPLANATION & SNAPSHOT</b>
-		</h2>
-		<ul class="ex">
-			<li class="dm">NetWork 실습
-				<ul class="mn">ACG</ul>
-				<ul>
-					<li>Ping Test</li>
-					<li>ACG 등록</li>
-				</ul>
-
-				<ul class="mn">Load Balancer</ul>
-				<ul>
-					<li>Load Balancer 생성</li>
-					<li>Apache 설치</li>
-					<li>Public ip 부여</li>
-					<li>ACG 설정-1</li>
-					<li>메인페이지 변경</li>
-					<li>도메인 접속</li>
-					<li>ACG 설정-2</li>
-				</ul>
-
-				<ul class="mn">Private Subnet</ul>
-				<ul>
-					<li>NetWork Interface</li>
-				</ul>
-			</li>
-
-			<li class="dm">Security 실습
-				<ul class="mn">OS 보안</ul>
-				<ul>
-					<li>root 접근 제한</li>
-					<li>Key 접속 방식 변경</li>
-				</ul>
-
-				<ul class="mn">접속 보안</ul>
-				<ul>
-					<li>SSl vpn</li>
-				</ul>
-
-				<ul class="mn">콘솔 보안</ul>
-				<ul>
-					<li>2차인증 로그인</li>
-				</ul>
-			</li>
+			<li>Apache 설치</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-8.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						httpd 서비스 설치</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-9.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						httpd 구동 후 상태 확인</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-10.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						index 페이지 접속</div>
+				</div>
+			</div>
+			<li>Public ip 부여 및 index 페이지 수정</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-11.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						ACG에 Public ip 부여</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-15.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						두 개의 서버 접속 상태 확인</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-12.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						index 페이지 재 접속</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-13.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						첫번째 서버의 index 페이지 수정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-16.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						두번째 서버의 index 페이지 수정</div>
+				</div>
+			</div>
+			<li>ACG 설정 후 로드밸런서 테스트</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-17.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						ACG 콘솔</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-18.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						설정 창에서 로드밸런서 선택</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-19.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						80 포트 허용으로 설정 후 저장</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-21.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						0.0.0.0 ip 삭제</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-14.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						LAB 도메인 접속 후 f5(새로고침)으로 테스트</div>
+				</div>
+			</div>
 		</ul>
-	</div>
+		</div>
+			
+		<hr class="cutter">
+		<div>
+			<h2 class="text-center">
+				<br><br><b>Private Subnet</b>
+			</h2>
+		<ul class="ex2">
+			<li>Network Interface</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-22.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						Private Subnet 콘솔</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-23.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						Zone & IP 대역 설정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-24.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						생성 완료</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-25.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						Network Interface 콘솔</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-26.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						세부사항 설정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-29.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						적용 서버 선택</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-28.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						디바이스 설정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-30.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						디바이스 연결 및 확인</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/Load Balancer-31.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						최종 Ping Test</div>
+				</div>
+			</div>
+		</ul>
+		</div>
 
-	<hr class="cutter">
+		<hr class="cutter">
+		<div>
+			<h2 class="text-center">
+				<br><br><b>OS 보안</b>
+			</h2>
+		<ul class="ex2">
+			<li>root 접근 제한</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/RootAccessControll-1.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						새로운 유저 추가</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/RootAccessControll-2.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						sshd_config에서 root 로그인 설정 변경</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/RootAccessControll-3.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						sshd 재시작</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/RootAccessControll-4.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						root 계정 접속 시도</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/RootAccessControll-5.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						새로운 유저 접속 시도</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/RootAccessControll-6.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						서버 접속 성공</div>
+				</div>
+			</div>
 
-	<h2 class="text-center">
-		<b>SNAPSHOT</b>
-	</h2>
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view7.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">데이터베이스 모델링</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view8.jpg"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">메뉴 구성</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view0.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">로그인</div>
-		</div>
-	</div>
+			
+			<li>Key 접속 방식 변경</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-1.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						Putty Gen에서 RSA private key 생성</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-3.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						생성된 authorized_Key file 복사</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-2.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						생성된 private Key 저장</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-4.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						유저 로그인 후, Key 파일 생성</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-5.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						권한 조정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-6.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						sshd_config에서 접속 설정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-9.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						sshd 재실행</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-10.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						Putty key 접속</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/KeyAccessChange-11.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						로그인 없이 Key 접속 성공</div>
+				</div>
+			</div>
+		</ul>
 
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view6.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">회원가입</div>
+				
+			<h2 class="text-center">
+				<br><br><b>접속 보안</b>
+			</h2>
+		<ul class="ex2">
+			<li>SSL VPN</li>
+			<div class="row2">
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-1.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						SSL VPN 콘솔에서 생성</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-2.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						SSL VPN 인증 방식 설정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-3.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						사용자 정보 설정</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-4.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						서버 ACG에 규칙 추가</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-5.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						Big-ip 실행</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-6.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						사용자 정보 입력 후 연결시도</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-8.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						서버 연결 성공</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-9.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						기존 본인 IP</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-10.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						추가된 SSL VPN IP</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-11.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						비공인 ip로 Ping test</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-12.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						Putty 접속 시도</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom: 1em;">
+					<img src="project/ncp3_files/SSLVPN-13.PNG" style="width: 100%; cursor: pointer"
+						onclick="onClick(this)">
+					<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+						공인 ip 및 포트포워딩 없이 연결 성공</div>
+				</div>
+			</div>
+		</ul>
 		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view1.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">도서 목록</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view2.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">도서 검색</div>
-		</div>
-	</div>
 
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view3.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">대출 이력</div>
+			<h2 class="text-center">
+				<br><br><b>콘솔 보안</b>
+			</h2>
+		<ul class="ex2">
+		<li>2차 인증 로그인</li>
+		<div class="row2">
+			<div class="col-md-4" style="margin-bottom: 1em;">
+				<img src="project/ncp3_files/SecondAuth-1.PNG" style="width: 100%; cursor: pointer"
+					onclick="onClick(this)">
+				<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+					홈페이지 2차인증 관리</div>
+			</div>
+			<div class="col-md-4" style="margin-bottom: 1em;">
+				<img src="project/ncp3_files/SecondAuth-2.PNG" style="width: 100%; cursor: pointer"
+					onclick="onClick(this)">
+				<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+					계정 비밀번호 정보 입력</div>
+			</div>
+			<div class="col-md-4" style="margin-bottom: 1em;">
+				<img src="project/ncp3_files/SecondAuth-3.PNG" style="width: 100%; cursor: pointer"
+					onclick="onClick(this)">
+				<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+					인증번호 & OTP 중 선택</div>
+			</div>
+			<div class="col-md-4" style="margin-bottom: 1em;">
+				<img src="project/ncp3_files/SecondAuth-4.PNG" style="width: 100%; cursor: pointer"
+					onclick="onClick(this)">
+				<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+					2차인증 수단 선택</div>
+			</div>
+			<div class="col-md-4" style="margin-bottom: 1em;">
+				<img src="project/ncp3_files/SecondAuth-5.PNG" style="width: 100%; cursor: pointer"
+					onclick="onClick(this)">
+				<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+					인증용 휴대폰 등록</div>
+			</div>
+			<div class="col-md-4" style="margin-bottom: 1em;">
+				<img src="project/ncp3_files/SecondAuth-6.PNG" style="width: 100%; cursor: pointer"
+					onclick="onClick(this)">
+				<div class="imgmodal-display-bottomleft" style="color: white; text-shadow: 1px 1px 0 #444">
+					로그인 시 2차 인증 실행</div>
+			</div>
 		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view4.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">전체 대출 이력</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view5.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">회원 목록</div>
-		</div>
-	</div>
+	</ul>
 </div>
