@@ -10,7 +10,7 @@
 
 	<div class="row">
 		<p class="col-md-4 text-center">
-			<img class="overview" src="project/AWS_files/Library.JPG">
+			<img class="overview" src="image/project/thumbnails/aws.png">
 		</p>
 		<div class="col-md-8">
 			<ul class="ex">
@@ -30,18 +30,21 @@
 			<b>EXPLANATION</b>
 		</h2>
 		<ul class="ex">
-			<li>회원제 서비스를 위하여 로그인 및 회원가입 등 회원제 기능이 있습니다. 회원은 다음 기능을 사용할 수
-				있습니다.
+			<li>서버 구축
 				<ul>
-					<li>도서 검색 및 대출: 도서를 검색하여 도서 정보를 확인, 도서를 대출할 수 있습니다.</li>
-					<li>대출 이력 : 회원 본인의 전체 대출 이력을 확인하고, 미반납 도서를 반납할 수 있습니다.</li>
+					<li>EC2 생성</li>
+					<li>EIP 할당 및 SSH 접속 테스트</li>
+					<li>S3 저장소 생성 및 EC2에 연결</li>
+					<li>IAM 인증 생성</li>
+					<li>S3FS-FUSE 설치</li>
+					<li>마운트 및 fstab 설정</li>
 				</ul>
 			</li>
-			<li>도서 관리를 위하여 관리자 권한이 존재합니다. 관리자는 다음 기능을 사용할 수 있습니다.
+			<li>서버 접근
 				<ul>
-					<li>도서 추가 및 삭제 : 시스템에 도서를 추가 또는 삭제할 수 있습니다.</li>
-					<li>전체 대출 이력 : 모든 사용자의 대출 이력을 확인할 수 있습니다.</li>
-					<li>관리자 추가 및 삭제 : 루트 관리자는 관리 인원 조정을 위해 관리자를 추가 및 삭제할 수 있습니다.</li>
+					<li>아파치 서버 설치</li>
+					<li>아파치 서버에 s3 적용</li>
+					<li>웹 페이지 업로드 후 권한 조정</li>
 				</ul>
 			</li>
 		</ul>
@@ -54,64 +57,52 @@
 	</h2>
 	<div class="row">
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view7.JPG"
+			<img src="project/AWS_files/aws001.jpg"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">데이터베이스 모델링</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">서론</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view8.jpg"
+			<img src="project/AWS_files/aws002.jpg"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">메뉴 구성</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">본론 - 인스턴스 생성</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view0.JPG"
+			<img src="project/AWS_files/aws003.jpg"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">로그인</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view6.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">회원가입</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">본론 - S3 저장소 생성</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view1.JPG"
+			<img src="project/AWS_files/aws004.jpg"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">도서 목록</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">본론 - IAM 인증 생성 </div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view2.JPG"
+			<img src="project/AWS_files/aws005.jpg"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">도서 검색</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view3.JPG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">대출 이력</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">본론 - 저장소 서버 연결</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view4.JPG"
+			<img src="project/AWS_files/aws006.jpg"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">전체 대출 이력</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">본론 - 웹 디자인 제작</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/Library_files/view5.JPG"
+			<img src="project/AWS_files/aws007.jpg"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">회원 목록</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">본론 - 아파치 서버 설치 및 구동</div>
+		</div>
+		<div class="col-md-4" style="margin-bottom: 1em;">
+			<img src="project/AWS_files/aws008.jpg"
+				style="width: 100%; cursor: pointer" onclick="onClick(this)">
+			<div class="imgmodal-display-bottomleft"
+				style="color: white; text-shadow: 1px 1px 0 #444">결론</div>
 		</div>
 	</div>
 </div>
