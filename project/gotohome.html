@@ -10,11 +10,11 @@
 
 	<div class="row">
 		<p class="col-md-4 text-center">
-			<img class="overview" src="project/EscapeRoom_files/EscapeRoom.png">
+			<img class="overview" src="image/project/thumbnails/gotohome.png">
 		</p>
 		<div class="col-md-8">
 			<ul class="ex">
-				<li><b>기획 의도 : </b>VR 기기를 이용한 가상현실 방탈출 구현</li>
+				<li><b>기획 의도 : </b>러닝 시뮬레이션 구현</li>
 				<li><b>기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간 :
 				</b>2019.05.28 ~ 2019.06.14</li>
 				<li><b>총 인원수 : </b> 2명</li>
@@ -39,12 +39,11 @@
 			<b>EXPLANATION</b>
 		</h2>
 		<ul class="ex">
-			<li>PC에서 사용 가능한 대다수의 VR기기 호환이 가능하도록(높이 등) 개발하였습니다.</li>
-			<li>인지부조화 해결을 위하여 텔레포트 기능을 이동 방식으로 사용하였습니다.</li>
-			<li>오른손의 컨트롤러를 이용하여 도구를 획득, 사용할 수 있습니다.</li>
-			<li>도구 및 반응하는 오브젝트를 상속 관계로 개발하여 오브젝트 반응을 구현하였습니다.</li>
-			<li>총 16단계의 풀이과정으로 구성되어 있으며 비밀번호 입력, 선택 등의 과정은 매 게임마다 랜덤으로
-				지정됩니다.</li>
+			<li>PC에서 사용 가능하며, VR기기 호환이 가능하도록(높이 등) 개발 하였습니다.</li>
+			<li>아이템 요소를 통해 시간 정지, 체력 추가 ,속도 증가와 같은 게임 요소를 추가 하였습니다.</li>
+			<li>죽는 방식에 따라 다르게 표현되는 게임오버 메세지를 구현하여 몰입감을 증가 시켰습니다.</li>
+			<li>업그레이드 창을 두어 성취감을 느낄 수 있도록 하였습니다.</li>
+			<li>기록 저장 기능을 추가 하였습니다.</li>
 		</ul>
 	</div>
 
@@ -55,104 +54,78 @@
 	</h2>
 	<div class="row">
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view01.png"
+			<img src="project/gotohome_files/1.png"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">상속 관계도</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">게임 메인 UI</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view02.PNG"
+			<img src="project/gotohome_files/2.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">상속 - 주요스크립트</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">조작키 설명</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view03.PNG"
+			<img src="project/gotohome_files/3.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">사용 오브젝트1</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view04.PNG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">사용 오브젝트2</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">업그레이드 UI</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view05.PNG"
+			<img src="project/gotohome_files/4.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임1 - Main</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">후방에서 몰려오는 좀비떼</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view06.PNG"
+			<img src="project/gotohome_files/6.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임2 - 방 전경</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view07.PNG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임3 - 도구 찾기</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">양 측면에서 달려오는 차량</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view08.PNG"
+			<img src="project/gotohome_files/8.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임4 - 선택1</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">외다리가 있는 강</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view09.PNG"
+			<img src="project/gotohome_files/5.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임5 - 비밀번호
-				입력</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view10.PNG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임6 - 제1탈출구</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">게임 오버 - 좀비</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view11.PNG"
+			<img src="project/gotohome_files/7.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임7 - 비밀번호
-				힌트1</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">게임 오버 - 교통사고</div>
 		</div>
 		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view12.PNG"
+			<img src="project/gotohome_files/9.PNG"
 				style="width: 100%; cursor: pointer" onclick="onClick(this)">
 			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임8 - 비밀번호
-				힌트2</div>
+				style="color: white; text-shadow: 1px 1px 0 #444">게임오버 - 익사</div>
+		</div>
+		<div class="col-md-4" style="margin-bottom: 1em;">
+			<img src="project/gotohome_files/10.PNG"
+				style="width: 100%; cursor: pointer" onclick="onClick(this)">
+			<div class="imgmodal-display-bottomleft"
+				style="color: white; text-shadow: 1px 1px 0 #444">게임오버 - 맨홀</div>
 		</div>
 	</div>
+	
+	<hr class="cutter">
 
-	<div class="row">
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view13.PNG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임9 - 선택2</div>
-		</div>
-		<div class="col-md-4" style="margin-bottom: 1em;">
-			<img src="project/EscapeRoom_files/view14.PNG"
-				style="width: 100%; cursor: pointer" onclick="onClick(this)">
-			<div class="imgmodal-display-bottomleft"
-				style="color: white; text-shadow: 1px 1px 0 #444">인게임10 - Game
-				Over</div>
+	<div>
+		<h2 class="text-center">
+			<b>VIDEOS</b>
+		</h2>
+		<div class="text-center videobox">
+			<iframe class="col-sm-12" src="https://www.youtube.com/embed/hx3S4iE9o2k"
+				frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen=""></iframe>
 		</div>
 	</div>
 </div>
